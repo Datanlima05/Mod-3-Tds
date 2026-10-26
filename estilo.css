@@ -1,0 +1,300 @@
+
+/* ==================================================
+   ESTILO.CSS — Landing Page Breaking Bad
+   Cada bloco estiliza uma seção do index.html
+   ================================================== */
+
+/* ---------- RESET: zera as diferenças entre navegadores ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border-box: o padding não aumenta a largura do elemento */
+}
+
+/* ---------- VARIÁVEIS: a paleta em um só lugar ---------- */
+:root {
+    --verde: #8BC34A;      /* verde inspirado na série */
+    --roxo: #3F6212;       /* verde-oliva de apoio */
+    --ciano: #EAB308;      /* amarelo para os destaques */
+    --escuro: #0A0F0A;     /* fundo quase preto */
+    --claro: #F8FAFC;      /* texto claro */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--escuro);
+    color: var(--claro);
+    /* var(): usa a variável declarada acima — mude ali, muda tudo */
+}
+
+/* ---------- HEADER fixo no topo ---------- */
+header {
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 16px 40px;
+    position: sticky;              
+    top: 0;
+    background: var(--escuro);
+    border-bottom: 1px solid var(--verde);
+    z-index: 10;
+}
+
+nav a {
+    color: var(--claro);
+    text-decoration: none;         
+    margin-left: 24px;
+}
+
+nav a:hover {
+    color: var(--ciano);           
+}
+
+/* ---------- HERO: ocupa a tela inteira ---------- */
+.hero {
+    min-height: 100vh;             
+    display: flex;
+    align-items: center;           
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.hero-texto h2 {
+    font-size: 48px;
+    line-height: 1.2;              
+    color: var(--verde);
+}
+
+.hero-texto p {
+    margin: 16px 0 24px;
+    color: #B8C5D6;
+}
+
+/* ---------- CTA: o botão que converte ---------- */
+.botao-cta {
+    display: inline-block;
+    background: var(--ciano);
+    color: var(--escuro);
+    padding: 16px 40px;
+    border-radius: 8px;           
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botao-cta:hover {
+    transform: scale(1.05);        
+    background: var(--verde);
+}
+
+/* ---------- SHOWCASE: grid de personagens ---------- */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas iguais — uma para cada personagem */
+    gap: 24px;                     
+    list-style: none;              
+    padding: 40px;
+}
+
+.card {
+    background: #151C15;
+    border: 1px solid var(--roxo);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--ciano);
+}
+
+.card img {
+    width: 100%;                   
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 12px 0;
+    color: var(--verde);
+}
+
+.card p {
+    margin-bottom: 12px;
+    color: #B8C5D6;
+}
+
+.preco {
+    color: var(--ciano);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ---------- PROVA SOCIAL: 3 depoimentos lado a lado ---------- */
+.grade-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 40px;
+}
+
+.depoimento {
+    background: #151C15;
+    border: 1px solid var(--roxo);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.depoimento img {
+    border-radius: 50%;            
+    width: 80px;
+    height: 80px;
+}
+
+.depoimento blockquote {
+    margin: 16px 0;
+    color: #E5E7EB;
+}
+
+.depoimento figcaption {
+    color: var(--verde);
+}
+
+/* ---------- FAQ: estilizando o acordeão nativo ---------- */
+.faq h2,
+.produtos h2,
+.depoimentos h2 {
+    text-align: center;
+    padding-top: 30px;
+    color: var(--verde);
+}
+
+details {
+    background: #151C15;
+    border: 1px solid var(--roxo);
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 12px 40px;             
+}
+
+summary {
+    cursor: pointer;               
+    font-weight: bold;
+}
+
+summary:hover {
+    color: var(--ciano);
+}
+
+details p {
+    margin-top: 12px;
+    color: var(--verde);
+}
+
+/* ---------- FOOTER + NEWSLETTER ---------- */
+footer {
+    border-top: 2px solid var(--verde);
+    padding: 40px;
+    text-align: center;
+}
+
+.newsletter label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.newsletter input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--roxo);
+    width: 260px;
+}
+
+.newsletter button {
+    padding: 12px 24px;
+    background: var(--verde);
+    color: var(--escuro);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: var(--ciano);
+}
+
+.copyright {
+    margin-top: 24px;
+    color: #8894a8;
+    font-size: 14px;
+}
+
+/* ---------- RESPONSIVIDADE: mobile-first ---------- */
+/* Abaixo de 800px, o layout se adapta ao celular */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .hero {
+        flex-direction: column;    
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-texto h2 {
+        font-size: 36px;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .grade-depoimentos {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    details {
+        margin: 12px 20px;
+    }
+
+    footer {
+        padding: 30px 16px;
+    }
+
+    .newsletter input {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+}

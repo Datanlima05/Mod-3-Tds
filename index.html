@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<!-- Primeira linha obrigatória: informa ao navegador que é HTML5 -->
+<html lang="pt-br">
+<!-- lang define o idioma: importante para acessibilidade e SEO -->
+
+<head>
+    <!-- O head guarda configurações que NÃO aparecem na página -->
+    <meta charset="UTF-8">
+    <!-- charset garante que acentos (ç, ã, é) apareçam corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport: faz a página se adaptar ao celular (responsividade) -->
+    <title>Breaking Bad — O mundo de Walter White</title>
+    <!-- title: é o texto que aparece na ABA do navegador -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- AQUI o HTML aponta para o arquivo de estilo separado -->
+</head>
+
+<body>
+    <!-- O body guarda TODO o conteúdo visível da página -->
+
+    <!-- ============ HEADER ============ -->
+    <!-- Cabeçalho: logo + menu de navegação -->
+    <header>
+        <h1 class="logo">🧪 Breaking Bad</h1>
+        <nav>
+            <!-- nav: agrupa os links de navegação do site -->
+            <a href="#hero">Início</a>
+            <a href="#produtos">Personagens</a>
+            <a href="#depoimentos">Opiniões</a>
+            <a href="#faq">Curiosidades</a>
+        </nav>
+    </header>
+
+    <!-- ============ HERO SECTION ============ -->
+    <!-- A primeira impressão: o que aparece sem rolar a página -->
+    <section id="hero" class="hero">
+        <div class="hero-texto">
+            <h2>Say My Name!</h2>
+            <!-- h2 aqui, porque o h1 já foi usado no logo -->
+            <p>Conheça o universo de Breaking Bad, a série que acompanha
+               a transformação de Walter White em Heisenberg.
+               Prepare-se para entrar no mundo do crime e da química.</p>
+            <!-- CTA: Call to Action — o botão que converte -->
+            <a href="#produtos" class="botao-cta">Conhecer personagens</a>
+        </div>
+        <img src="https://placehold.co/400x400/14532D/fff?text=Breaking+Bad"
+             alt="Imagem temática de Breaking Bad com referência à química">
+        <!-- alt é OBRIGATÓRIO: descreve a imagem para leitores de tela -->
+    </section>
+
+    <!-- ============ SHOWCASE DE PRODUTOS ============ -->
+    <!-- Vitrine: grid de cards com os personagens -->
+    <section id="produtos" class="produtos">
+        <h2>Personagens principais</h2>
+        <ul class="grade-produtos">
+            <!-- ul + li: lista semântica para os cards -->
+            <li class="card">
+                <img src="https://placehold.co/300x200/14532D/fff?text=Walter+White"
+                     alt="Walter White, também conhecido como Heisenberg">
+                <h3>Walter White</h3>
+                <p>Professor de química que se transforma em Heisenberg.</p>
+                <span class="preco">Heisenberg</span>
+            </li>
+            <li class="card">
+                <img src="https://placehold.co/300x200/166534/fff?text=Jesse+Pinkman"
+                     alt="Jesse Pinkman, parceiro de Walter White">
+                <h3>Jesse Pinkman</h3>
+                <p>Ex-aluno de Walter e seu parceiro no mundo do crime.</p>
+                <span class="preco">Yo, Bitch!</span>
+            </li>
+            <li class="card">
+                <img src="https://placehold.co/300x200/365314/fff?text=Saul+Goodman"
+                     alt="Saul Goodman, advogado dos personagens">
+                <h3>Saul Goodman</h3>
+                <p>Advogado esperto que sempre encontra uma saída.</p>
+                <span class="preco">Better Call Saul!</span>
+            </li>
+            <li class="card">
+                <img src="https://placehold.co/300x200/3F6212/fff?text=Gus+Fring"
+                     alt="Gustavo Fring, empresário e antagonista da série">
+                <h3>Gustavo Fring</h3>
+                <p>Empresário respeitado com um perigoso segredo.</p>
+                <span class="preco">Los Pollos Hermanos</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ============ PROVA SOCIAL ============ -->
+    <!-- Depoimentos: opiniões dos fãs da série -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>O que os fãs dizem</h2>
+        <div class="grade-depoimentos">
+            <figure class="depoimento">
+                <!-- figure: marca um conteúdo ilustrativo independente -->
+                <img src="https://placehold.co/80x80/14532D/fff?text=A"
+                     alt="Avatar de um fã da série">
+                <blockquote>"Uma das melhores séries já feitas!"</blockquote>
+                <figcaption>Fã de Walter White</figcaption>
+                <!-- figcaption: legenda da figure -->
+            </figure>
+            <figure class="depoimento">
+                <img src="https://placehold.co/80x80/166534/fff?text=B"
+                     alt="Avatar de um fã de Jesse Pinkman">
+                <blockquote>"Jesse é um dos personagens mais marcantes."</blockquote>
+                <figcaption>Fã de Jesse Pinkman</figcaption>
+            </figure>
+            <figure class="depoimento">
+                <img src="https://placehold.co/80x80/365314/fff?text=C"
+                     alt="Avatar de um fã de Breaking Bad">
+                <blockquote>"O final foi simplesmente inesquecível!"</blockquote>
+                <figcaption>Fã de Heisenberg</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <!-- Acordeão NATIVO: details + summary, sem JavaScript! -->
+    <section id="faq" class="faq">
+        <h2>Curiosidades sobre a série</h2>
+
+        <details>
+            <summary>Quantas temporadas tem Breaking Bad?</summary>
+            <p>A série possui 5 temporadas e acompanha a transformação
+               de Walter White ao longo de sua jornada.</p>
+        </details>
+
+        <details>
+            <summary>Quem é Heisenberg?</summary>
+            <p>Heisenberg é o nome usado por Walter White em sua
+               vida no mundo do crime.</p>
+        </details>
+
+        <details>
+            <summary>Onde a história acontece?</summary>
+            <p>A série se passa principalmente em Albuquerque,
+               no estado do Novo México, nos Estados Unidos.</p>
+        </details>
+    </section>
+
+    <!-- ============ FOOTER + NEWSLETTER ============ -->
+    <!-- Rodapé: fecha a navegação com formulário de e-mail -->
+    <footer>
+        <form class="newsletter">
+            <label for="email">Receba novidades sobre Breaking Bad:</label>
+            <!-- label com for ligado ao id do input: acessibilidade -->
+            <input type="email" id="email" name="email"
+                   placeholder="seu@email.com" required>
+            <!-- type="email" valida o formato sozinho no navegador -->
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="copyright">© 2026 — Breaking Bad • Site de fãs desenvolvido pela turma de Web Design</p>
+    </footer>
+
+</body>
+</html>
